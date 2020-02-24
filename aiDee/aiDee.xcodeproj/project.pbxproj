@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		532169EA2401F4BD00C9D2D2 /* aiDee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532169E02401F4BD00C9D2D2 /* aiDee.framework */; };
-		532169EF2401F4BD00C9D2D2 /* aiDeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532169EE2401F4BD00C9D2D2 /* aiDeeTests.swift */; };
+		532169EF2401F4BD00C9D2D2 /* BiometricAuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532169EE2401F4BD00C9D2D2 /* BiometricAuthenticationTests.swift */; };
 		532169F12401F4BD00C9D2D2 /* aiDee.h in Headers */ = {isa = PBXBuildFile; fileRef = 532169E32401F4BD00C9D2D2 /* aiDee.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53EA2DC724033EB20070D8BE /* BiometricError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA2DC324033EB20070D8BE /* BiometricError.swift */; };
 		53EA2DC924033EB20070D8BE /* BiometricAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA2DC524033EB20070D8BE /* BiometricAuthentication.swift */; };
 		53EA2DCA24033EB20070D8BE /* BiometricResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA2DC624033EB20070D8BE /* BiometricResult.swift */; };
+		53EA2DCC2403434B0070D8BE /* MockLAContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA2DCB2403434B0070D8BE /* MockLAContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,11 +31,12 @@
 		532169E32401F4BD00C9D2D2 /* aiDee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aiDee.h; sourceTree = "<group>"; };
 		532169E42401F4BD00C9D2D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		532169E92401F4BD00C9D2D2 /* aiDeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aiDeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		532169EE2401F4BD00C9D2D2 /* aiDeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aiDeeTests.swift; sourceTree = "<group>"; };
+		532169EE2401F4BD00C9D2D2 /* BiometricAuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthenticationTests.swift; sourceTree = "<group>"; };
 		532169F02401F4BD00C9D2D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53EA2DC324033EB20070D8BE /* BiometricError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricError.swift; sourceTree = "<group>"; };
 		53EA2DC524033EB20070D8BE /* BiometricAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricAuthentication.swift; sourceTree = "<group>"; };
 		53EA2DC624033EB20070D8BE /* BiometricResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricResult.swift; sourceTree = "<group>"; };
+		53EA2DCB2403434B0070D8BE /* MockLAContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLAContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +91,9 @@
 		532169ED2401F4BD00C9D2D2 /* aiDeeTests */ = {
 			isa = PBXGroup;
 			children = (
-				532169EE2401F4BD00C9D2D2 /* aiDeeTests.swift */,
+				532169EE2401F4BD00C9D2D2 /* BiometricAuthenticationTests.swift */,
 				532169F02401F4BD00C9D2D2 /* Info.plist */,
+				53EA2DCB2403434B0070D8BE /* MockLAContext.swift */,
 			);
 			path = aiDeeTests;
 			sourceTree = "<group>";
@@ -215,7 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				532169EF2401F4BD00C9D2D2 /* aiDeeTests.swift in Sources */,
+				53EA2DCC2403434B0070D8BE /* MockLAContext.swift in Sources */,
+				532169EF2401F4BD00C9D2D2 /* BiometricAuthenticationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

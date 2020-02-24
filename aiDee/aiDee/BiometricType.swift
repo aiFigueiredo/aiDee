@@ -19,9 +19,9 @@ public enum BiometricType: String {
 extension BiometricType {
     public init(biometricType: LABiometryType) {
         switch biometricType {
-        case LABiometryType.touchID:
+        case .touchID:
             self = .touchID
-        case LABiometryType.faceID:
+        case .faceID:
             self = .faceID
         default:
             self = .none

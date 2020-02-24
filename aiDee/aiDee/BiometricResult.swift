@@ -3,7 +3,7 @@
 //  aiDee
 //
 //  Created by Jose Miguel Figueiredo on 22/02/2020.
-//  Copyright © 2019 Jose Figueiredo. All rights reserved.
+//  Copyright © 2020 Jose Figueiredo. All rights reserved.
 //
 
 // Enum that represents a biometric authentication result

@@ -11,6 +11,7 @@
 		532169EF2401F4BD00C9D2D2 /* BiometricAuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532169EE2401F4BD00C9D2D2 /* BiometricAuthenticationTests.swift */; };
 		532169F12401F4BD00C9D2D2 /* aiDee.h in Headers */ = {isa = PBXBuildFile; fileRef = 532169E32401F4BD00C9D2D2 /* aiDee.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53EA2DC724033EB20070D8BE /* BiometricError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA2DC324033EB20070D8BE /* BiometricError.swift */; };
+		53EA2DC824033EB20070D8BE /* BiometricType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA2DC424033EB20070D8BE /* BiometricType.swift */; };
 		53EA2DC924033EB20070D8BE /* BiometricAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA2DC524033EB20070D8BE /* BiometricAuthentication.swift */; };
 		53EA2DCA24033EB20070D8BE /* BiometricResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA2DC624033EB20070D8BE /* BiometricResult.swift */; };
 		53EA2DCC2403434B0070D8BE /* MockLAContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA2DCB2403434B0070D8BE /* MockLAContext.swift */; };
@@ -34,6 +35,7 @@
 		532169EE2401F4BD00C9D2D2 /* BiometricAuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthenticationTests.swift; sourceTree = "<group>"; };
 		532169F02401F4BD00C9D2D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53EA2DC324033EB20070D8BE /* BiometricError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricError.swift; sourceTree = "<group>"; };
+		53EA2DC424033EB20070D8BE /* BiometricType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricType.swift; sourceTree = "<group>"; };
 		53EA2DC524033EB20070D8BE /* BiometricAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricAuthentication.swift; sourceTree = "<group>"; };
 		53EA2DC624033EB20070D8BE /* BiometricResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricResult.swift; sourceTree = "<group>"; };
 		53EA2DCB2403434B0070D8BE /* MockLAContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLAContext.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				53EA2DC524033EB20070D8BE /* BiometricAuthentication.swift */,
 				53EA2DC324033EB20070D8BE /* BiometricError.swift */,
 				53EA2DC624033EB20070D8BE /* BiometricResult.swift */,
+				53EA2DC424033EB20070D8BE /* BiometricType.swift */,
 				532169E42401F4BD00C9D2D2 /* Info.plist */,
 			);
 			path = aiDee;
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53EA2DC824033EB20070D8BE /* BiometricType.swift in Sources */,
 				53EA2DCA24033EB20070D8BE /* BiometricResult.swift in Sources */,
 				53EA2DC924033EB20070D8BE /* BiometricAuthentication.swift in Sources */,
 				53EA2DC724033EB20070D8BE /* BiometricError.swift in Sources */,

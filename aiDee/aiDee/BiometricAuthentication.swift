@@ -8,6 +8,8 @@
 
 import LocalAuthentication
 
+public typealias BiometricAuthenticationClosure = ((BiometricResult) -> Void)
+
 ///
 /// Class responsible for interact with LocalAuthentication API for biometric authentication: Touch ID or Face ID.
 /// This class contains methods in its API to check availability and perform biometrics authentication on a iOS Device.
@@ -56,7 +58,7 @@ public class BiometricAuthentication {
     /// @localizedReason: LocalizedSring with reason for requesting biometics authentication
     /// @completioon: Closure with BiometricsResult as a parameter and Void as a return type
     public func authenticateUser(localizedReason: String,
-                                 completion: @escaping (BiometricResult) -> Void) {
+                                 completion: @escaping BiometricAuthenticationClosure) {
         guard isBiometricsAvailable() else {
             completion(.failure(.biometryNotAvailable))
             return
@@ -77,7 +79,7 @@ public class BiometricAuthentication {
 
     private func handleBiometricAuthenticationCompletion(success: Bool,
                                                          evaluateError: Error?,
-                                                         completion: @escaping (BiometricResult) -> Void) {
+                                                         completion: @escaping BiometricAuthenticationClosure) {
         if success {
             completion(.success)
         } else {

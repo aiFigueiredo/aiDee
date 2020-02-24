@@ -48,7 +48,7 @@ class BiometricAuthenticationTests: XCTestCase {
                                       file: StaticString = #file,
                                       line: UInt = #line) {
         mockLAContext.mockBiometryType = type
-        XCTAssertEqual(sut.biometricType(), type, file: file, line: line)
+        XCTAssertEqual(sut.biometricType(), BiometricType(biometricType: type), file: file, line: line)
         XCTAssertEqual(mockLAContext.canEvaluatePolicyCalledCount, 1, file: file, line: line)
         XCTAssertEqual(mockLAContext.policyCalled, .deviceOwnerAuthenticationWithBiometrics, file: file, line: line)
         XCTAssertNil(mockLAContext.errorCalled ?? "", file: file, line: line)

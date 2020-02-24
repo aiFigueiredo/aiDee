@@ -92,8 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				532169EE2401F4BD00C9D2D2 /* BiometricAuthenticationTests.swift */,
-				532169F02401F4BD00C9D2D2 /* Info.plist */,
 				53EA2DCB2403434B0070D8BE /* MockLAContext.swift */,
+				532169F02401F4BD00C9D2D2 /* Info.plist */,
 			);
 			path = aiDeeTests;
 			sourceTree = "<group>";

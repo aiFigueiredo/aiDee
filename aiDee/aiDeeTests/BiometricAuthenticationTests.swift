@@ -44,9 +44,19 @@ class BiometricAuthenticationTests: XCTestCase {
         XCTAssertNil(mockLAContext.errorCalled ?? "")
     }
 
+    func testBiometryType_NoBiometricsAvailable() {
+        mockLAContext.shouldEvaluateWithSuccess = false
+        mockLAContext.mockBiometryType = .faceID
+        XCTAssertEqual(sut.biometricType(), .none)
+        XCTAssertEqual(mockLAContext.canEvaluatePolicyCalledCount, 1)
+        XCTAssertEqual(mockLAContext.policyCalled, .deviceOwnerAuthenticationWithBiometrics)
+        XCTAssertNil(mockLAContext.errorCalled ?? "")
+    }
+
     private func validateBiometryType(type: LABiometryType,
                                       file: StaticString = #file,
                                       line: UInt = #line) {
+        mockLAContext.shouldEvaluateWithSuccess = true
         mockLAContext.mockBiometryType = type
         XCTAssertEqual(sut.biometricType(), BiometricType(biometricType: type), file: file, line: line)
         XCTAssertEqual(mockLAContext.canEvaluatePolicyCalledCount, 1, file: file, line: line)

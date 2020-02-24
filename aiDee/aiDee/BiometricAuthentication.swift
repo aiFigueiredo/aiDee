@@ -39,18 +39,11 @@ public class BiometricAuthentication {
     /// Check what type of biometric solution is available if any
     /// Returns a BiometricType type with the correct case: .touchId, .faceId or .none if unavailable
     public func biometricType() -> BiometricType {
-        _ = context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
-        switch context.biometryType {
-        case .none:
-            return .none
-        case .touchID:
-            return .touchID
-        case .faceID:
-            return .faceID
-        @unknown default:
-            assert(false, "not supported")
+        guard isBiometricsAvailable() else {
             return .none
         }
+
+        return BiometricType(biometricType: context.biometryType)
     }
 
     /// Authenticates user using biometrics

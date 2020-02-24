@@ -12,8 +12,6 @@ Pod::Spec.new do |s|
   s.license                 = { :type => 'MIT', :file => 'LICENSE' }
   s.source_files            = "aiDee/aiDee/**/*"
   s.exclude_files           = "aiDee/aiDee/*.plist"
-  s.public_header_files     = "aiDee.framework/Headers/*.h"
-  s.vendored_frameworks     = "aiDee.framework"
   s.ios.deployment_target   = "11.0"
   s.swift_version           = "5.2"
   s.platform                = :ios, "11.0"

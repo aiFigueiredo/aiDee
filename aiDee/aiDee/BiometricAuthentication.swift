@@ -16,18 +16,15 @@ public typealias BiometricAuthenticationClosure = ((BiometricResult) -> Void)
 ///
 public class BiometricAuthentication {
     let context: LAContext
-    let mainQueue: DispatchQueue
+    let mainQueue: DispatchQueue = .main
 
     // MARK: - Public Methods
 
     /// Initializer for BiometricAuthentication object
     /// - Parameters:
     ///   - context: LAContext object defaulted to use initializer the main initializer
-    ///   - mainQueue: DispatchQueue object defaulted to use main queue
-    public init(context: LAContext = LAContext(),
-                mainQueue: DispatchQueue = .main) {
+    public init(context: LAContext = LAContext()) {
         self.context = context
-        self.mainQueue = mainQueue
     }
 
     /// Checks if any biometric solution is available

@@ -13,7 +13,23 @@
 		5354234724035C020036D7A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5354234624035C020036D7A8 /* Assets.xcassets */; };
 		5354234A24035C020036D7A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5354234824035C020036D7A8 /* LaunchScreen.storyboard */; };
 		5354235224035D870036D7A8 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5354235124035D870036D7A8 /* UIViewControllerExtension.swift */; };
+		53B9FBAC24047AA500E2B295 /* aiDee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B9FBAB24047AA500E2B295 /* aiDee.framework */; };
+		53B9FBAD24047AA500E2B295 /* aiDee.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53B9FBAB24047AA500E2B295 /* aiDee.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		53B9FBAE24047AA600E2B295 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				53B9FBAD24047AA500E2B295 /* aiDee.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5354233A24035BFD0036D7A8 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +40,7 @@
 		5354234924035C020036D7A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5354234B24035C020036D7A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5354235124035D870036D7A8 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		53B9FBAB24047AA500E2B295 /* aiDee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = aiDee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53B9FBAC24047AA500E2B295 /* aiDee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +60,7 @@
 			children = (
 				5354233C24035BFD0036D7A8 /* Example */,
 				5354233B24035BFD0036D7A8 /* Products */,
+				53B9FBAA24047AA500E2B295 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +86,14 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
+		53B9FBAA24047AA500E2B295 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53B9FBAB24047AA500E2B295 /* aiDee.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +105,7 @@
 				5354233624035BFD0036D7A8 /* Sources */,
 				5354233724035BFD0036D7A8 /* Frameworks */,
 				5354233824035BFD0036D7A8 /* Resources */,
+				53B9FBAE24047AA600E2B295 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

@@ -18,7 +18,7 @@ class MockLAContext: LAContext {
     public var evaluateSuccess: Bool = false
     public var evaluateError: Error?
 
-    public var mockBiometryType: LABiometryType = .none
+    public var mockBiometryType: LABiometryType = .LABiometryNone
     override var biometryType: LABiometryType {
         get { mockBiometryType }
         set { mockBiometryType = newValue }

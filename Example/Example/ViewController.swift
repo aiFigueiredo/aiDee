@@ -31,7 +31,7 @@ class ViewController: UIViewController {
 
     private func setUpLabels() {
         self.biometricsAvailableLabel.text = biometricAuth.isBiometricsAvailable() ? "Available" : "Not Available"
-        self.biometricsTypeLabel.text = biometricAuth.biometricType().rawValue
+        self.biometricsTypeLabel.text = biometricAuth.biometricType().toString()
     }
 
     // MARK: - IBAction methods
@@ -43,6 +43,19 @@ class ViewController: UIViewController {
             } else if case .failure(let error) = result {
                 self?.showAlert(title: "Error", message: error.errorDescription)
             }
+        }
+    }
+}
+
+extension BiometricType {
+    func toString() -> String {
+        switch self {
+        case .touchID:
+            return "Touch ID"
+        case .faceID:
+            return "Face ID"
+        default:
+            return "Not Available"
         }
     }
 }

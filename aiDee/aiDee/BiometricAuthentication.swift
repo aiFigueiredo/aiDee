@@ -47,6 +47,7 @@ public class BiometricAuthentication {
             return .faceID
         @unknown default:
             assert(false, "not supported")
+            return .none
         }
     }
 

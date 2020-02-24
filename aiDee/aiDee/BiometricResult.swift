@@ -6,8 +6,8 @@
 //  Copyright © 2020 Jose Figueiredo. All rights reserved.
 //
 
-// Enum that represents a biometric authentication result
-// Either success or failure with BiometricError
+/// Enum that represents a biometric authentication result
+/// Either success or failure with BiometricError
 public enum BiometricResult {
     case success
     case failure(BiometricError)

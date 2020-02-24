@@ -21,9 +21,9 @@ public class BiometricAuthentication {
     // MARK: - Public Methods
 
     /// Initializer for BiometricAuthentication object
-    ///
-    /// @context: LAContext object defaulted to use initializer the main initializer
-    /// @mainQueue: DispatchQueue object defaulted to use main queue
+    /// - Parameters:
+    ///   - context: LAContext object defaulted to use initializer the main initializer
+    ///   - mainQueue: DispatchQueue object defaulted to use main queue
     public init(context: LAContext = LAContext(),
                 mainQueue: DispatchQueue = .main) {
         self.context = context
@@ -47,9 +47,9 @@ public class BiometricAuthentication {
     }
 
     /// Authenticates user using biometrics
-    /// Note that the credentials should be stored in the keychain
-    /// @localizedReason: LocalizedSring with reason for requesting biometics authentication
-    /// @completioon: Closure with BiometricsResult as a parameter and Void as a return type
+    /// - Parameters:
+    ///   - localizedReason: LocalizedSring with reason for requesting biometics authentication
+    ///   - completion: BiometricsResult as a parameter and Void as a return type
     public func authenticateUser(localizedReason: String,
                                  completion: @escaping BiometricAuthenticationClosure) {
         guard isBiometricsAvailable() else {

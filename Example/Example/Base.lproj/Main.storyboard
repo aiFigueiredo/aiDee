@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="aiDeeExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NX-xL-WtM">
+                                <rect key="frame" x="144" y="239" width="126" height="30"/>
+                                <state key="normal" title="Trigger Biometrics"/>
+                                <connections>
+                                    <action selector="authenticateUsingBiometrics:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KAj-4m-CI1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biometrics:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nh5-ep-UqM">
+                                <rect key="frame" x="50" y="84" width="86" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biometrics Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmB-xi-eAa">
+                                <rect key="frame" x="50" y="132" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2X-io-73V">
+                                <rect key="frame" x="156" y="84" width="208" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YW-fl-a3W">
+                                <rect key="frame" x="198" y="132" width="166" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NmB-xi-eAa" firstAttribute="top" secondItem="Nh5-ep-UqM" secondAttribute="bottom" constant="27" id="62t-Zp-zgb"/>
+                            <constraint firstItem="K2X-io-73V" firstAttribute="centerY" secondItem="Nh5-ep-UqM" secondAttribute="centerY" id="I1f-u4-HZT"/>
+                            <constraint firstItem="K2X-io-73V" firstAttribute="leading" secondItem="Nh5-ep-UqM" secondAttribute="trailing" constant="20" id="KMM-ej-jFj"/>
+                            <constraint firstItem="5YW-fl-a3W" firstAttribute="centerY" secondItem="NmB-xi-eAa" secondAttribute="centerY" id="SEg-W2-lhe"/>
+                            <constraint firstItem="5YW-fl-a3W" firstAttribute="leading" secondItem="NmB-xi-eAa" secondAttribute="trailing" constant="20" id="YZC-fa-tMS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5YW-fl-a3W" secondAttribute="trailing" constant="50" id="bJR-Mc-6li"/>
+                            <constraint firstItem="5NX-xL-WtM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bov-AK-vdd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K2X-io-73V" secondAttribute="trailing" constant="50" id="cp1-Bq-Jp2"/>
+                            <constraint firstItem="5NX-xL-WtM" firstAttribute="top" secondItem="NmB-xi-eAa" secondAttribute="bottom" constant="86" id="g9l-eq-wcp"/>
+                            <constraint firstItem="NmB-xi-eAa" firstAttribute="leading" secondItem="Nh5-ep-UqM" secondAttribute="leading" id="kMm-fT-5ob"/>
+                            <constraint firstItem="Nh5-ep-UqM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="txr-tE-GAr"/>
+                            <constraint firstItem="NmB-xi-eAa" firstAttribute="width" secondItem="Nh5-ep-UqM" secondAttribute="width" multiplier="1.48837" id="uib-wx-msH"/>
+                            <constraint firstAttribute="width" secondItem="K2X-io-73V" secondAttribute="width" multiplier="1.99038" id="wJF-SI-CQG"/>
+                            <constraint firstItem="Nh5-ep-UqM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="x71-de-qja"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="biometricsAvailableLabel" destination="K2X-io-73V" id="TZ1-Fu-ILm"/>
+                        <outlet property="biometricsTypeLabel" destination="5YW-fl-a3W" id="63h-N4-8Fv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="116"/>
+        </scene>
+    </scenes>
+</document>

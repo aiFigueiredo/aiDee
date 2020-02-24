@@ -14,13 +14,18 @@ import LocalAuthentication
 ///
 public class BiometricAuthentication {
     let context: LAContext
+    let mainQueue: DispatchQueue
 
     // MARK: - Public Methods
 
     /// Initializer for BiometricAuthentication object
+    ///
     /// @context: LAContext object defaulted to use initializer the main initializer
-    public init(context: LAContext = LAContext()) {
+    /// @mainQueue: DispatchQueue object defaulted to use main queue
+    public init(context: LAContext = LAContext(),
+                mainQueue: DispatchQueue = .main) {
         self.context = context
+        self.mainQueue = mainQueue
     }
 
     /// Checks if any biometric solution is available
@@ -58,9 +63,12 @@ public class BiometricAuthentication {
 
         context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics,
                                localizedReason: localizedReason) { [weak self] success, evaluateError in
-                                self?.handleBiometricAuthenticationCompletion(success: success,
-                                                                              evaluateError: evaluateError,
-                                                                              completion: completion)
+                                self?.mainQueue.async {
+                                    self?.handleBiometricAuthenticationCompletion(success: success,
+                                    evaluateError: evaluateError,
+                                    completion: completion)
+                                }
+
         }
     }
 

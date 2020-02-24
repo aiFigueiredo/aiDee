@@ -10,10 +10,10 @@ import LocalAuthentication
 
 /// Enum that represents the Biometric option available on a devide:
 /// touchId, faceId or none if unavailable
-public enum BiometricType: String {
-    case none = "Not Available"
-    case touchID = "Touch Id"
-    case faceID = "Face Id"
+public enum BiometricType {
+    case none
+    case touchID
+    case faceID
 }
 
 extension BiometricType {

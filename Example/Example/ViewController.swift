@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     @IBAction func authenticateUsingBiometrics(_ sender: Any) {
         biometricAuth.authenticateUser(localizedReason: "Reason for Biometric request") { [weak self] result in
             if case .success = result {
-                self?.showAlert(title: "Success", message: "Biometric Auth Successfull")
+                self?.showAlert(title: "Success", message: "Biometric Auth Successful")
             } else if case .failure(let error) = result {
                 self?.showAlert(title: "Error", message: error.errorDescription)
             }

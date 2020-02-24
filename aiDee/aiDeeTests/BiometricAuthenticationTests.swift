@@ -171,7 +171,7 @@ class BiometricAuthenticationTests: XCTestCase {
                                                                                biometricError: .unknown)
     }
 
-    func testAuthenticateUser_evaluatePolicySuccessfull() {
+    func testAuthenticateUser_evaluatePolicySuccessful() {
         let testString = "testString"
         let expectation = self.expectation(description: "failureInEvaluatePolicy_failureWithUnknownError")
         mockLAContext.evaluateSuccess = true

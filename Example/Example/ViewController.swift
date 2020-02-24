@@ -15,7 +15,7 @@ class ViewController: UIViewController {
 
     let biometricAuth = BiometricAuthentication()
 
-    // MARK:- IBOutlets declaration
+    // MARK: - IBOutlets declaration
 
     @IBOutlet weak var biometricsAvailableLabel: UILabel!
     @IBOutlet weak var biometricsTypeLabel: UILabel!

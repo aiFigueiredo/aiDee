@@ -10,7 +10,7 @@ import LocalAuthentication
 
 ///
 /// Class responsible for interact with LocalAuthentication API for biometric authentication: Touch ID or Face ID.
-/// This class contains methods in its API to check availability and perform biometrics authentication with a iOS Device.
+/// This class contains methods in its API to check availability and perform biometrics authentication on a iOS Device.
 ///
 public class BiometricAuthentication {
     let context: LAContext
@@ -37,7 +37,7 @@ public class BiometricAuthentication {
     /// Check what type of biometric solution is available if any
     /// Returns a BiometricType type with the correct case: .touchId, .faceId or .none if unavailable
     public func biometricType() -> BiometricType {
-        let _ = context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
+        _ = context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
         switch context.biometryType {
         case .none:
             return .none

@@ -55,7 +55,7 @@ class BiometricAuthenticationTests: XCTestCase {
     }
 
     func testBiometryType_biometryTypeNone_BiometricTypeNone() {
-        validateBiometryType(type: .none)
+        validateBiometryType(type: .LABiometryNone)
     }
 
     func testBiometryType_biometryTypeFaceId_BiometricTypeFaceId() {

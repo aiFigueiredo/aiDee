@@ -49,7 +49,7 @@ extension BiometricError {
 extension BiometricError {
     /// English error description of a certain error
     public var errorDescription: String {
-        let description: String 
+        let description: String
         switch self {
         case .authenticationFailed:
             description = "There was a problem verifying your identity."

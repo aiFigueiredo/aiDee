@@ -22,12 +22,12 @@ public enum BiometricError: Error {
 extension BiometricError {
     init(error: Error?) {
         guard case let error = error,
-            let bioError = error as? LAError else {
+            let biometricError = error as? LAError else {
                 self = .unknown
                 return
         }
 
-        switch bioError {
+        switch biometricError {
         case LAError.authenticationFailed:
             self = .authenticationFailed
         case LAError.userCancel:

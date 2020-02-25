@@ -8,7 +8,8 @@
 
 import LocalAuthentication
 
-public typealias BiometricAuthenticationClosure = ((BiometricResult) -> Void)
+public typealias BiometricResult = Result<Void, BiometricError>
+public typealias BiometricAuthenticationClosure = (BiometricResult) -> Void
 
 ///
 /// Class responsible for interact with LocalAuthentication API for biometric authentication: Touch ID or Face ID.
@@ -71,7 +72,7 @@ public class BiometricAuthentication {
                                                          evaluateError: Error?,
                                                          completion: @escaping BiometricAuthenticationClosure) {
         if success {
-            completion(.success)
+            completion(.success(()))
         } else {
             completion(.failure(BiometricError(error: evaluateError)))
         }

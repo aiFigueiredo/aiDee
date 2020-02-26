@@ -1,19 +1,26 @@
 # aiDee
-## iOS Biometrics Micro-Framework
-
 
 > **aiDee** *(/ɪd/)*, *noun*
 >
 > "... abbreviation for identification: any official card or document with your name and photograph or other information on it that you use to prove who you are."
 
 
+## iOS Biometrics Micro-Framework
+
+aiDee is a Swift micro-framework that can be used to authenticate with iOS Devices using biometrics: Touch ID or Face ID.
+Written in Swift this aims to be a simple example of Apple's not-so-new [LocalAuthentication](https://developer.apple.com/documentation/localauthentication) API usage. 
+
+[![Platform](https://img.shields.io/cocoapods/p/aiDee.svg?style=flat)](http://cocoapods.org/pods/aiDee)
+[![Swift](https://img.shields.io/badge/swift-5.1-orange.svg)](https://cocoapods.org/pods/aiDee)
 [![CocoaPods](https://img.shields.io/cocoapods/v/aiDee.svg)](https://cocoapods.org/pods/aiDee)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![SPM](https://img.shields.io/badge/swift%20package%20manager-compatible-green.svg)](https://github.com/aiFigueiredo/aiDee/)
 [![apm](https://img.shields.io/apm/l/vim-mode.svg)](https://github.com/aiFigueiredo/aiDee/blob/master/LICENSE)
 
 
-aiDee is a micro-framework that can be used to authenticate with iOS Devices using biometrics: Touch ID or Face ID.
-Written in Swift this aims to be a simple example of Apple's not-so-new [LocalAuthentication](https://developer.apple.com/documentation/localauthentication) API usage. 
+## Requirements
+
+Xcode 11, iOS 11.0
 
 
 ## Get Started

@@ -31,7 +31,7 @@ public class BiometricAuthentication {
     /// Checks if any biometric solution is available
     /// Returns a Bool representing if biometrics is available or not
     public func isBiometricsAvailable() -> Bool {
-        return context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
+        context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
     }
 
     /// Check what type of biometric solution is available if any

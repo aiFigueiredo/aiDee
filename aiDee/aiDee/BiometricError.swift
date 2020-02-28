@@ -49,23 +49,21 @@ extension BiometricError {
 extension BiometricError {
     /// English error description of a certain error
     public var errorDescription: String {
-        let description: String
         switch self {
         case .authenticationFailed:
-            description = "There was a problem verifying your identity."
+            return "There was a problem verifying your identity."
         case .userCancel:
-            description = "User Canceled"
+            return "User Canceled"
         case .userFallback:
-            description = "User opted for Password"
+            return "User opted for Password"
         case .biometryNotAvailable:
-            description = "Face ID/Touch ID is not available."
+            return "Face ID/Touch ID is not available."
         case .biometryNotEnrolled:
-            description = "Face ID/Touch ID is not set up."
+            return "Face ID/Touch ID is not set up."
         case .biometryLockout:
-            description = "Face ID/Touch ID is locked."
+            return "Face ID/Touch ID is locked."
         case .unknown:
-            description = "An unknown error occurred"
+            return "An unknown error occurred"
         }
-        return description
     }
 }

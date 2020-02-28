@@ -70,7 +70,7 @@ public class BiometricAuthentication {
 
     private func handleBiometricAuthenticationCompletion(success: Bool,
                                                          evaluateError: Error?,
-                                                         completion: @escaping BiometricAuthenticationClosure) {
+                                                         completion: BiometricAuthenticationClosure) {
         if success {
             completion(.success(()))
         } else {

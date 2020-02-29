@@ -20,7 +20,9 @@ Written in Swift this aims to be a simple example of Apple's not-so-new [LocalAu
 
 ## Requirements
 
-Xcode 11, iOS 11.0
+* Swift 5.1
+* Xcode 11
+* iOS 11
 
 
 ## Get Started
@@ -32,31 +34,40 @@ The value should be a string describing the reason why your app uses Touch or Fa
 
 ## Installation
 
-### Cocoapods
+### - [CocoaPods](https://cocoapods.org)
 
 aiDee is available through [CocoaPods](https://cocoapods.org/pods/aiDee). 
-Just add the following line to your PodFile:
+Just add the following line to your `PodFile`:
 
-```swift
+```
 pod 'aiDee'
 ```
 And then run the following command on the terminal:
 
-```swift
+```
 pod install
 ```
 
-### Carthage
-Add the entry to your Cartfile:
+### - [Carthage](https://github.com/Carthage/Carthage)
+Add the entry to your `Cartfile`:
 
-```swift
+```
 github "aiFigueiredo/aiDee"
 ```
 
 And then run the following command on the terminal:
 
-```swift
+```
 carthage update
+```
+
+### - [Swift Package Manager](https://swift.org/package-manager/)
+Add the package to your `Package.swift` file, under dependencies:
+
+```
+dependencies: [
+    .package(url: "https://github.com/aiFigueiredo/aiDee.git", from: "1.0.1")
+]
 ```
 
 
@@ -77,10 +88,9 @@ let biometricsType: BiometricType = biometricAuth.biometricType() // .touchId / 
 // Authenticate using Biometrics providing a LocalizedString with a reason for the request
 
 biometricAuth.authenticateUser(localizedReason: "Reason for Biometric request") { [weak self] result in
-    if case .success = result {
-        self?.showAlert(title: "Success", message: "Biometric Auth Successfull")
-    } else if case .failure(let error) = result {
-        self?.showAlert(title: "Error", message: error.errorDescription)
+    switch result {
+        case .success: self?.showAlert(title: "Success", message: "Biometric Auth Successful")
+        case .failure(let error): self?.showAlert(title: "Error", message: error.errorDescription)
     }
 }
 ```

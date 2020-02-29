@@ -23,7 +23,9 @@ extension BiometricType {
             self = .touchID
         case .faceID:
             self = .faceID
-        default:
+        case .none:
+            self = .none
+        @unknown default:
             self = .none
         }
     }

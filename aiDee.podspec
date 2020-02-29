@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "aiDee"
-  s.version      = "1.0"
+  s.version      = "1.0.1"
   s.summary      = "aiDee is a micro-framework that can be used to authenticate with iOS Devices using biometrics: Touch ID or Face ID."
   s.description  = <<-DESC
   aiDee is a micro-framework that can be used to authenticate with iOS Devices using biometrics: Touch ID or Face ID.
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.source_files            = "aiDee/aiDee/**/*"
   s.exclude_files           = "aiDee/aiDee/*.plist"
   s.ios.deployment_target   = "11.0"
-  s.swift_version           = "5.2"
+  s.swift_version           = "5.1"
   s.platform                = :ios, "11.0"
   s.source                  = { :git => "https://github.com/aiFigueiredo/aiDee.git", :tag => s.version.to_s }
 end

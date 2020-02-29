@@ -1,6 +1,6 @@
 //
 //  ViewControllerExtension.swift
-//  CabyShop
+//  Example
 //
 //  Created by Jose Miguel Figueiredo on 22/02/2020.
 //  Copyright © 2020 Jose Figueiredo. All rights reserved.
